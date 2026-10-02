@@ -1,70 +1,150 @@
-# Getting Started with Create React App
+# 🧪 Rick and Morty Multiverse Explorer
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+[![React](https://img.shields.io/badge/React-18.2.0-61DAFB?logo=react&logoColor=black)](https://react.dev/)
+[![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3-7952B3?logo=bootstrap&logoColor=white)](https://getbootstrap.com/)
+[![Deploy with Vercel](https://img.shields.io/badge/Vercel-Deployed-black?logo=vercel)](https://vercel.com/)
+[![API](https://img.shields.io/badge/API-The_Rick_and_Morty_API-97ce4c?logo=graphql&logoColor=black)](https://rickandmortyapi.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Available Scripts
+Aplicación web moderna e interactiva construida con **React** que consume la API REST de **[The Rick and Morty API](https://rickandmortyapi.com/)**. Permite explorar, buscar y filtrar personajes de todo el multiverso con una interfaz temática oscura inspirada en la serie.
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🚀 Demo en Vivo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Puedes ver y probar la aplicación desplegada en:
+👉 **[rick-and-morty-api-with-react.vercel.app](https://vercel.com/)** *(Actualiza este enlace con tu URL de Vercel tras desplegar)*
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## ✨ Características Principales
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* 🔍 **Búsqueda en Tiempo Real:** Filtra personajes por nombre con respuesta fluida y optimización de peticiones (debounce).
+* 🏷️ **Filtros Avanzados:**
+  * **Estado:** Vivo (*Alive*), Muerto (*Dead*) o Desconocido (*Unknown*).
+  * **Género:** Femenino (*Female*), Masculino (*Male*), Sin género (*Genderless*) o Desconocido (*Unknown*).
+* 🃏 **Tarjetas Interactivas:**
+  * Indicador visual de estado con punto neón pulsante.
+  * Efecto hover con elevación e iluminación.
+* 📋 **Modal de Detalles del Personaje:** Consulta especie, género, cantidad de episodios, dimensión/planeta de origen y última ubicación conocida con soporte para tecla `Esc` y clic exterior.
+* 📄 **Paginación Dinámica:**
+  * Contador de página actual y total de páginas (`Página X de Y`).
+  * Desplazamiento suave automático al inicio de página al navegar.
+* 🛸 **Feedback Visual:** Spinner animado tipo portal interdimensional para estados de carga y pantalla amigable cuando no hay resultados.
+* 📱 **Diseño 100% Responsivo:** Adaptado para móviles, tablets y computadoras de escritorio.
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 🛠️ Tecnologías Utilizadas
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* **Frontend:** [React 18](https://reactjs.org/) (Hooks: `useState`, `useEffect`, `useCallback`)
+* **Estilos:** CSS3 personalizado con estética temática (Glows, Glassmorphism, Google Fonts *Outfit*) + [Bootstrap 5](https://getbootstrap.com/)
+* **Fuente de Datos:** [The Rick and Morty API](https://rickandmortyapi.com/)
+* **Despliegue:** [Vercel](https://vercel.com/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+---
 
-### `npm run eject`
+## 📂 Estructura del Proyecto
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+```text
+├── public/
+│   ├── favicon.ico
+│   ├── index.html        # Plantilla HTML con metadatos Open Graph y Bootstrap CDN
+│   └── manifest.json
+├── src/
+│   ├── components/
+│   │   ├── CharacterModal.js # Modal con ficha técnica del personaje
+│   │   ├── Characters.js     # Cuadrícula de tarjetas de personajes
+│   │   ├── Filters.js        # Buscador y selectores de estado/género
+│   │   ├── Footer.js         # Pie de página y créditos
+│   │   ├── Loading.js        # Spinner animado con estilo portal
+│   │   ├── Navbar.js         # Barra de navegación superior
+│   │   └── Pagination.js     # Controles de paginación y contador
+│   ├── App.css           # Estilos personalizados, colores neón y animaciones
+│   ├── App.js            # Lógica central, consumo de la API y estados globales
+│   └── index.js          # Punto de entrada de React
+├── vercel.json           # Configuración de rutas y reescrituras para Vercel
+├── package.json          # Dependencias y scripts de ejecución
+└── README.md             # Documentación del proyecto
+```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 💻 Instalación y Ejecución Local
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para clonar y ejecutar este proyecto en tu máquina local:
 
-## Learn More
+1. **Clonar el repositorio:**
+   ```bash
+   git clone https://github.com/LuisFCosteC/Rick-and-Morty-Api-with-React.git
+   ```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+2. **Entrar al directorio del proyecto:**
+   ```bash
+   cd Rick-and-Morty-Api-with-React
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Instalar dependencias:**
+   ```bash
+   npm install
+   ```
 
-### Code Splitting
+4. **Iniciar el servidor de desarrollo:**
+   ```bash
+   npm start
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador para ver la aplicación.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+5. **Compilar para producción:**
+   ```bash
+   npm run build
+   ```
 
-### Analyzing the Bundle Size
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## 🌐 Guía de Despliegue en Vercel
 
-### Making a Progressive Web App
+### Opción 1: Despliegue desde la Web de Vercel (Recomendado)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+1. Sube tus cambios a GitHub:
+   ```bash
+   git add .
+   git commit -m "feat: interfaz moderna, filtros, buscador y modal"
+   git push origin main
+   ```
+2. Ve a [vercel.com](https://vercel.com/) e inicia sesión con tu cuenta de GitHub.
+3. Haz clic en **Add New...** > **Project**.
+4. Selecciona tu repositorio **`Rick-and-Morty-Api-with-React`** y pulsa **Import**.
+5. Vercel detectará automáticamente Create React App:
+   * **Framework Preset:** `Create React App`
+   * **Build Command:** `npm run build`
+   * **Output Directory:** `build`
+6. Haz clic en **Deploy**. ¡Tu aplicación estará en línea en menos de un minuto con HTTPS automático!
 
-### Advanced Configuration
+### Opción 2: Despliegue usando Vercel CLI
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+1. Instala Vercel CLI globalmente:
+   ```bash
+   npm install -g vercel
+   ```
+2. Ejecuta el comando en la raíz del proyecto:
+   ```bash
+   vercel
+   ```
+3. Para publicar en producción:
+   ```bash
+   vercel --prod
+   ```
 
-### Deployment
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 📄 Licencia
 
-### `npm run build` fails to minify
+Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE) para más detalles.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por **Luis Coste**  
+* GitHub: [@LuisFCosteC](https://github.com/LuisFCosteC)
