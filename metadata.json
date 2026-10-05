@@ -1,0 +1,6 @@
+{
+  "name": "Rick and Morty Multiverse Explorer",
+  "description": "Explora y filtra personajes del multiverso de Rick and Morty con estadísticas en tiempo real.",
+  "permissions": [],
+  "capabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
